@@ -3,7 +3,7 @@
 class Movie {
         public $titolo ;
         public $voto;
-        public $lingua;
+        private $lingua;
         public $durata ;
         public $genere;
         

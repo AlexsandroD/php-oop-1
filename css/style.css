@@ -1,0 +1,36 @@
+*:not(ul,li){
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aqua;
+}
+
+
+h1{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+main{
+    height: 100vh;
+    background-color: black;
+    color: white;
+    width: 80%;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+

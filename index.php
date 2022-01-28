@@ -32,33 +32,39 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
          <meta charset="UTF-8">
          <meta http-equiv="X-UA-Compatible" content="IE=edge">
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="./css/style.css">
          <title>Movie</title>
  </head>
  <body>
-         <h1>Movies</h1>
-         <?php foreach ($movies as $movie) { ?>
+<main>
+        <div class="main-container">
+                <h1>Movies</h1>
                 <div class="container">
-                        <h2><?php echo $movie->titolo ?></h2>
-                        <ul>
-                                <li>Voto: <?php echo "{$movie->voto}"?></li>
-                                <li>Genere: <?php echo "{$movie->genere}"?></li>
-                                <li>Lingua:<?php echo "{$movie->getLeng()}"?></li>
-                        </ul>
+                <?php foreach ($movies as $movie) { ?>
+                        <div class="info">
+                                <h2><?php echo $movie->titolo ?></h2>
+                                <ul>
+                                        <li>Voto: <?php echo "{$movie->voto}"?></li>
+                                        <li>Genere: <?php echo "{$movie->genere}"?></li>
+                                        <li>Lingua:<?php echo "{$movie->getLeng()}"?></li>
+                                </ul>
+                        </div>
+                                <?php } ?>
                 </div>
-                <?php } ?>
-        <h1>Anime Movies</h1>    
-        <?php foreach ($moviesAnime as $movie) { ?>
+                <h1>Anime Movies</h1>    
                 <div class="container">
-                        <h2><?php echo $movie->titolo ?></h2>
-                        <ul>
-                                <li>Voto: <?php echo "{$movie->voto}"?></li>
-                                <li>Genere: <?php echo "{$movie->genere}"?></li>
-                                <li>Lingua:<?php echo "{$movie->getLeng()}"?></li>
-                        </ul>
-                </div>
-                <?php } ?>
-        
-
-         
+                <?php foreach ($moviesAnime as $movie) { ?>
+                        <div class="info">
+                                <h2><?php echo $movie->titolo ?></h2>
+                                <ul>
+                                        <li>Voto: <?php echo "{$movie->voto}"?></li>
+                                        <li>Genere: <?php echo "{$movie->genere}"?></li>
+                                        <li>Lingua:<?php echo "{$movie->getLeng()}"?></li>
+                                </ul>
+                        </div>
+                                <?php } ?>
+                 </div>
+        </div>
+</main> 
  </body>
  </html>
